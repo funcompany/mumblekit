@@ -7,9 +7,9 @@
 [submodule "3rdparty/openssl"]
 	path = 3rdparty/openssl
 	url = git://github.com/mkrautz/openssl-mirror.git
-[submodule "3rdparty/opus"]
-	path = 3rdparty/opus
-	url = git://github.com/xiph/opus.git
 [submodule "3rdparty/speex"]
 	path = 3rdparty/speex
 	url = https://github.com/mumble-voip/speex
+[submodule "3rdparty/opus"]
+	path = 3rdparty/opus
+	url = https://github.com/mumble-voip/opus
