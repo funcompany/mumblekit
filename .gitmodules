@@ -10,9 +10,6 @@
 [submodule "3rdparty/opus"]
 	path = 3rdparty/opus
 	url = git://github.com/xiph/opus.git
-[submodule "3rdparty/speexdsp-src"]
-	path = 3rdparty/speexdsp-src
-	url = https://github.com/mumble-voip/speexdsp
 [submodule "3rdparty/speex"]
 	path = 3rdparty/speex
 	url = https://github.com/mumble-voip/speex
