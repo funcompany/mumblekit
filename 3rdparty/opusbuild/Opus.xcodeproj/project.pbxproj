@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2084547C23A7DBC3003B4BCB /* LPC_fit.c in Sources */ = {isa = PBXBuildFile; fileRef = 2084547B23A7DBC3003B4BCB /* LPC_fit.c */; };
 		2815CCD514E6DFF200AAE69C /* opus_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2867ABC714E6D85900E24B98 /* opus_decoder.c */; };
 		2815CCD614E6DFF200AAE69C /* opus_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2867ABC814E6D85900E24B98 /* opus_encoder.c */; };
 		2815CCD714E6DFF200AAE69C /* opus.c in Sources */ = {isa = PBXBuildFile; fileRef = 2867ABC914E6D85900E24B98 /* opus.c */; };
@@ -272,6 +273,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2084547B23A7DBC3003B4BCB /* LPC_fit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LPC_fit.c; path = ../../../Mumblekit/3rdparty/opus/silk/LPC_fit.c; sourceTree = "<group>"; };
 		2815CCC414E6DF9700AAE69C /* Opus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Opus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		28190D02150D611E00E07613 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		2867AAD014E6D6ED00E24B98 /* bands.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bands.c; path = ../opus/celt/bands.c; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 		2867AAF014E6D6F400E24B98 /* silk */ = {
 			isa = PBXGroup;
 			children = (
+				2084547B23A7DBC3003B4BCB /* LPC_fit.c */,
 				2867AB3014E6D82300E24B98 /* A2NLSF.c */,
 				2867AB3114E6D82300E24B98 /* ana_filt_bank_1.c */,
 				2867AB3214E6D82300E24B98 /* biquad_alt.c */,
@@ -908,6 +911,7 @@
 				2867AB7F14E6D82300E24B98 /* bwexpander.c in Sources */,
 				2867AB8014E6D82300E24B98 /* check_control_input.c in Sources */,
 				2867AB8114E6D82300E24B98 /* CNG.c in Sources */,
+				2084547C23A7DBC3003B4BCB /* LPC_fit.c in Sources */,
 				2867AB8214E6D82300E24B98 /* code_signs.c in Sources */,
 				2867AB8314E6D82300E24B98 /* control_audio_bandwidth.c in Sources */,
 				2867AB8414E6D82300E24B98 /* control_codec.c in Sources */,
