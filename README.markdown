@@ -64,3 +64,21 @@ One way to do this is to include MumbleKit.xcodeproj inside your main project. T
    build phases.
 
  * Add a copy build phase. Copy MumbleKit.framework into 'Frameworks'.
+ 
+ ## Development
+
+- Clone the mumblekit [repo](https://github.com/funcompany/mumblekit).
+- Switch to branch `upgrade_submodules`
+
+### Upgrading OpenSSL
+- Build a new static OpenSSL library using [this script](https://github.com/jasonacox/Build-OpenSSL-cURL)
+- Replace libcrypto and libssl
+
+### Upgrading any of the underlying codecs in mumblekit
+- All the codecs are included as git submodules so in order to update any coded all you need to do is pull the latest changes from upstream remote
+
+### Building and upgrading underlying mumblekit static library
+- Open MumbleKit.xcodeproj file and switch the configuration to Release
+- Build the project
+- manually copy `libMumbleKit.a` and paste here as `libMumbleKitIOS.a`
+
