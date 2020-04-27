@@ -9,7 +9,9 @@
 #import <AudioUnit/AudioUnit.h>
 #import <AudioUnit/AUComponent.h>
 #import <AudioToolbox/AudioToolbox.h>
+#if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
+#endif
 
 @interface MKVoiceProcessingDevice () {
 @public
@@ -24,6 +26,7 @@
 }
 @end
 
+#if TARGET_OS_IOS
 // DeviceIsRunningiOS7OrGreater returns YES if
 // the iOS device is on iOS 7 or greater.
 static BOOL DeviceIsRunningiOS7OrGreater() {
@@ -38,6 +41,7 @@ static BOOL DeviceIsRunningiOS7OrGreater() {
     }
     return iOS7OrGreater;
 }
+#endif
 
 static OSStatus inputCallback(void *udata, AudioUnitRenderActionFlags *flags, const AudioTimeStamp *ts,
                               UInt32 busnum, UInt32 nframes, AudioBufferList *buflist) {

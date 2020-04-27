@@ -270,6 +270,7 @@
 		28AD14DD1895217500DBBC08 /* celt_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AD14DB1895217500DBBC08 /* celt_encoder.c */; };
 		28AD14DF1895218000DBBC08 /* celt_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AD14DE1895218000DBBC08 /* celt_decoder.c */; };
 		28AD14E01895218000DBBC08 /* celt_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 28AD14DE1895218000DBBC08 /* celt_decoder.c */; };
+		ED05F33B2456CCF700266BFD /* LPC_fit.c in Sources */ = {isa = PBXBuildFile; fileRef = 2084547B23A7DBC3003B4BCB /* LPC_fit.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -773,6 +774,7 @@
 				2815CD0514E6DFF200AAE69C /* PLC.c in Sources */,
 				2815CD0614E6DFF200AAE69C /* process_NLSFs.c in Sources */,
 				2815CD0714E6DFF200AAE69C /* quant_LTP_gains.c in Sources */,
+				ED05F33B2456CCF700266BFD /* LPC_fit.c in Sources */,
 				2815CD0814E6DFF200AAE69C /* resampler_down2_3.c in Sources */,
 				2815CD0914E6DFF200AAE69C /* resampler_down2.c in Sources */,
 				2815CD0A14E6DFF200AAE69C /* resampler_private_AR2.c in Sources */,
@@ -1001,8 +1003,11 @@
 		2815CCD314E6DF9700AAE69C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1010,8 +1015,11 @@
 		2815CCD414E6DF9700AAE69C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1041,8 +1049,11 @@
 		285B423B14E6E0F00045E282 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = AppStore;
@@ -1072,8 +1083,11 @@
 		285B423F14E6E0F50045E282 /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = BetaDist;

@@ -16,6 +16,7 @@
     MKAudioSettings              _settings;
 
     AudioUnit                    _playbackAudioUnit;
+    AudioBufferList              _buflist;
     int                          _playbackFrequency;
     int                          _playbackChannels;
     int                          _playbackSampleSize;

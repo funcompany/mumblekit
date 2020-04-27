@@ -752,11 +752,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2845A728132D9B2F0034D631 /* Build configuration list for PBXNativeTarget "MumbleKit (Mac)" */;
 			buildPhases = (
+				28CC3703132EDA4500241269 /* CopyFiles */,
 				2845A715132D9B2F0034D631 /* Sources */,
 				2845A716132D9B2F0034D631 /* Frameworks */,
 				2845A717132D9B2F0034D631 /* Headers */,
 				2845A718132D9B2F0034D631 /* Resources */,
-				28CC3703132EDA4500241269 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1056,8 +1056,10 @@
 		2845A729132D9B2F0034D631 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1065,8 +1067,10 @@
 		2845A72A132D9B2F0034D631 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1100,8 +1104,10 @@
 		28498F1C138AB6A9000509DD /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = BetaDist;
@@ -1135,8 +1141,10 @@
 		28A2AEC41478A92700F3B83F /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
 			};
 			name = AppStore;
