@@ -56,14 +56,8 @@ Then, do the following:
 How do I include this into my Xcode project? (Mac OS X, Xcode 4)
 ----------------------------------------------------------------
 
-One way to do this is to include MumbleKit.xcodeproj inside your main project. Then:
-
- * Make MumbleKit (Mac) a direct dependency of your chosen target.
-
- * Add MumbleKit.framework to the 'Link Binary With Libraries' section of your chosen target's
-   build phases.
-
- * Add a copy build phase. Copy MumbleKit.framework into 'Frameworks'.
+* Add MumbleKit.framework to Embed Frameworks and sign.
+* Add all libs under MumbleKit.framework/Versions/Current/Frameworks to Embed Frameworks and sign.
  
  ## Development
 

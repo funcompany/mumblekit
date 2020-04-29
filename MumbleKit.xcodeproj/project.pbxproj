@@ -149,6 +149,7 @@
 		BCD11E0E158F40FA00321E06 /* MKChannelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD11E08158F40FA00321E06 /* MKChannelGroup.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		ED05F3782456DD9A00266BFD /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED05F3762456DD9A00266BFD /* libcrypto.a */; };
 		ED05F3792456DD9A00266BFD /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED05F3772456DD9A00266BFD /* libssl.a */; };
+		ED93E08D2459296600E52E39 /* Opus.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 285B426314E6E1200045E282 /* Opus.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +302,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				ED93E08D2459296600E52E39 /* Opus.dylib in CopyFiles */,
 				28CC3704132EDA5200241269 /* CELT-0.7.0.dylib in CopyFiles */,
 				28CC3706132EDA5200241269 /* ProtocolBuffers.dylib in CopyFiles */,
 				28CC3707132EDA5200241269 /* Speex.dylib in CopyFiles */,
@@ -761,6 +763,7 @@
 				2845A716132D9B2F0034D631 /* Frameworks */,
 				2845A717132D9B2F0034D631 /* Headers */,
 				2845A718132D9B2F0034D631 /* Resources */,
+				ED93E08E24592E3F00E52E39 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -929,6 +932,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED93E08E24592E3F00E52E39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$TARGET_BUILD_DIR/MumbleKit.framework/MumbleKit,
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MUMBLEKIT_EXECUTABLE=$TARGET_BUILD_DIR/MumbleKit.framework/MumbleKit\nDYLIB_PATH=@executable_path/../Frameworks\n#otool -l $MUMBLEKIT_EXECUTABLE\necho $MUMBLEKIT_EXECUTABLE\n\ninstall_name_tool -change /usr/local/lib/CELT-0.7.0.dylib $DYLIB_PATH/CELT-0.7.0.dylib $MUMBLEKIT_EXECUTABLE\ninstall_name_tool -change /usr/local/lib/Opus.dylib $DYLIB_PATH/Opus.dylib $MUMBLEKIT_EXECUTABLE\ninstall_name_tool -change /usr/local/lib/ProtocolBuffers.dylib $DYLIB_PATH/ProtocolBuffers.dylib $MUMBLEKIT_EXECUTABLE\ninstall_name_tool -change /usr/local/lib/Speex.dylib $DYLIB_PATH/Speex.dylib $MUMBLEKIT_EXECUTABLE\ninstall_name_tool -change /usr/local/lib/SpeexDSP.dylib $DYLIB_PATH/SpeexDSP.dylib $MUMBLEKIT_EXECUTABLE\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2845A715132D9B2F0034D631 /* Sources */ = {
