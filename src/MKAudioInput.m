@@ -163,6 +163,7 @@
     
     micFrequency = [_device inputSampleRate];
     numMicChannels = [_device numberOfInputChannels];
+    NSLog(@"MKAudioInput: micFrequency: %d , numMicChannels: %d", micFrequency, numMicChannels);
     
     [self initializeMixer];
  

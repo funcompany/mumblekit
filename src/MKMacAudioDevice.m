@@ -293,8 +293,9 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
         NSLog(@"MKAudioOuptut: Unable to get output stream format from AudioUnit.");
         return NO;
     }
-    
-    _playbackFrequency = (int) 48000;
+
+    NSLog(@"MKAudioOuptut fmt.mSampleRate: %f", fmt.mSampleRate);
+    _playbackFrequency = (int) 16000;
     _playbackChannels = (int) fmt.mChannelsPerFrame;
     _playbackSampleSize = _playbackChannels * sizeof(short);
     
