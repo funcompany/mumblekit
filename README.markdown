@@ -58,6 +58,7 @@ How do I include this into my Xcode project? (Mac OS X, Xcode 4)
 
 * Add MumbleKit.framework to Embed Frameworks and sign.
 * Add all libs under MumbleKit.framework/Versions/Current/Frameworks to Embed Frameworks and sign.
+* make sure they're not in build phases `link binary with libraries`.
  
  ## Development
 

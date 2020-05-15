@@ -388,7 +388,6 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
     if (fmt.mChannelsPerFrame > 1) {
         NSLog(@"MKMacAudioDevice: Input device with more than one channel detected. Defaulting to 1.");
     }
-    
     _recordFrequency = (int) fmt.mSampleRate;
     _recordMicChannels = 1;
     _recordSampleSize = _recordMicChannels * sizeof(short);
@@ -490,21 +489,20 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
     }
 
     NSLog(@"MKAudioOuptut fmt.mSampleRate: %f", fmt.mSampleRate);
-    _playbackFrequency = (int) 16000;
+    _playbackFrequency = _recordFrequency;
     _playbackChannels = (int) fmt.mChannelsPerFrame;
     _playbackSampleSize = _playbackChannels * sizeof(short);
-    
+
+    fmt.mSampleRate = (float) _playbackFrequency;
+    fmt.mFormatID = kAudioFormatLinearPCM;
     fmt.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+    fmt.mBytesPerPacket = _playbackSampleSize;
+    fmt.mFramesPerPacket = 1;
+    fmt.mBytesPerFrame = _playbackSampleSize;
     fmt.mBitsPerChannel = sizeof(short) * 8;
     
     NSLog(@"MKMacAudioDevice: Output device currently configured as %iHz sample rate, %i channels, %i sample size", _playbackFrequency, _playbackChannels, _playbackSampleSize);
-    
-    fmt.mFormatID = kAudioFormatLinearPCM;
-    fmt.mSampleRate = (float) _playbackFrequency;
-    fmt.mBytesPerFrame = _playbackSampleSize;
-    fmt.mBytesPerPacket = _playbackSampleSize;
-    fmt.mFramesPerPacket = 1;
-    
+
     len = sizeof(AudioStreamBasicDescription);
     err = AudioUnitSetProperty(_playbackAudioUnit, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Input, 0, &fmt, len);
     if (err != noErr) {
